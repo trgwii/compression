@@ -88,6 +88,11 @@ const updateFromOutput = () => {
     gzip,
     output_brotli.value,
   );
+  history.replaceState(
+    null,
+    document.title,
+    "#" + encodeURIComponent(output_brotli.value),
+  );
 };
 
 input.addEventListener("input", updateFromInput);
